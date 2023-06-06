@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>struct Person: Comparable, Equatable, CustomStringConvertible {
+    let firstName: String
+    let lastName: String
+    let address: String
+    
+    var description: String {
+        "Person: \(firstName) \(lastName) \(address)"
+    }
+    static func ==(lhs: Person, rhs: Person) -&gt; Bool {
+        lhs.firstName == rhs.firstName &amp;&amp; lhs.lastName == rhs.lastName
+    }
+    static func &lt; (lhs: Person, rhs: Person) -&gt; Bool {
+        lhs.firstName &lt; rhs.firstName
+    }
+}
+
+
+let people = [
+    Person(firstName: "Matt", lastName: "Hanlon", address: "3 Cloudland Park"),
+    Person(firstName: "Jim", lastName: "Stone", address: "5 Havana Bay"),
+    Person(firstName: "Kelsey", lastName: "Cook", address: "98 Santa Cruz Way"),
+    Person(firstName: "Haleigh", lastName: "Washington", address: "8 Penn Street")
+]
+
+let sortedPeople = people.sorted()
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 840}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
