@@ -27,7 +27,7 @@ struct ContentView: View {
             .onAppear {
                 withAnimation(.linear.repeatForever(autoreverses: false).speed(0.1)) {
                     self.rotationAngle = Angle(degrees: self.rotationAngle.degrees + 360)
-                    self.saturnPosition = CGPoint(x: proxy.size.width, y: Double.random(in: 0...300))
+                    self.saturnPosition = CGPoint(x: proxy.size.width+50, y: Double.random(in: 0...300))
                 }
                 withAnimation(.easeInOut.repeatForever(autoreverses: true).speed(0.04)) { 
                     self.ufoPosition = CGPoint(x: proxy.size.width/2, y: 0)
